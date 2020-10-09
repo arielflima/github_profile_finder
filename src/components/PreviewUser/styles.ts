@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   margin: 15px;
-  width: 92%;
+  width: 93%;
   height: 200px;
 `;
 
@@ -10,6 +10,7 @@ export const TouchClick = styled.TouchableHighlight`
   flex: 1;
   background-color: #373a40;
   border-radius: 15px;
+  border: 2px solid #29a19c;
 `;
 
 export const ContainerTouchableHighlight = styled.View`
@@ -23,6 +24,7 @@ export const Avatar = styled.Image`
   height: 120px;
   border-radius: 60px;
   margin: 10px;
+  border: 1px solid #29a19c;
 `;
 
 export const PreviewTextContent = styled.Text`
