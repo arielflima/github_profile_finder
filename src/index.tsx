@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import { StatusBar, View } from 'react-native';
 
-import Home from './Home';
+import Home from './pages/Home';
 
 const App: React.FC = () => (
   <View style={{ flex: 1 }}>
