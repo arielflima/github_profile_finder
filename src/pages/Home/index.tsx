@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-import { Container, Header, TitleHeader, Content, SearchArea } from './styles';
+import {
+  Container,
+  Header,
+  TitleHeader,
+  Content,
+  SearchArea,
+  IconFormatted,
+} from './styles';
 
 import api from '../../services/api';
 
@@ -23,6 +30,7 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Header>
+        <IconFormatted name="github" size={22} />
         <TitleHeader>Github profile finder</TitleHeader>
       </Header>
       <Content>

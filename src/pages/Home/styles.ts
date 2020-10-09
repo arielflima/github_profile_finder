@@ -1,5 +1,5 @@
-import { RectButton } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
+import Icon from 'react-native-vector-icons/Feather';
 
 export const Container = styled.View`
   flex: 1;
@@ -9,14 +9,23 @@ export const Header = styled.View`
   width: 100%;
   height: 10%;
   background-color: #373a40;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 20px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-bottom: 5px;
+  flex-direction: row;
+`;
+
+export const IconFormatted = styled(Icon)`
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 5px;
 `;
 
 export const TitleHeader = styled.Text`
   color: #fff;
   font-size: 24px;
+  margin-bottom: 3px;
 `;
 
 export const Content = styled.View`
