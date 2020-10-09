@@ -6,16 +6,18 @@ import api from '../../services/api';
 
 import SearchInput from '../../components/SearchInput';
 import SearchButton from '../../components/SearchButton';
-import PreviewUser from '../../components/PreviewUser';
+import PreviewUser, { PreviewUserProps } from '../../components/PreviewUser';
 
 const Home: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState<PreviewUserProps>();
 
   const handleSearch = useCallback(async () => {
     const response = await api.get(`users/${searchValue}`);
 
-    setUser(response.data);
+    const { avatar_url, name, login, followers, public_repos } = response.data;
+
+    setUser({ avatar_url, name, login, followers, public_repos });
   }, [searchValue]);
 
   return (
@@ -32,7 +34,7 @@ const Home: React.FC = () => {
           />
           <SearchButton title="buttonSearch" onPress={handleSearch} />
         </SearchArea>
-        <PreviewUser {...user} />
+        {user && <PreviewUser {...user} />}
       </Content>
     </Container>
   );

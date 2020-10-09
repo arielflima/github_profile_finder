@@ -24,7 +24,8 @@ export const Avatar = styled.Image`
   height: 120px;
   border-radius: 60px;
   margin: 10px;
-  border: 1px solid #29a19c;
+  border-color: #29a19c;
+  border-width: 2px;
 `;
 
 export const PreviewTextContent = styled.Text`

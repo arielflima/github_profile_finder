@@ -10,7 +10,7 @@ import {
   TouchClick,
 } from './styles';
 
-interface PreviewUserProps {
+export interface PreviewUserProps {
   avatar_url: string;
   name: string;
   login: string;
