@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import { StatusBar, View } from 'react-native';
 
-import Home from './pages/Home';
+import Routes from './routes';
 
 const App: React.FC = () => (
   <View style={{ flex: 1 }}>
@@ -11,7 +11,7 @@ const App: React.FC = () => (
       backgroundColor="transparent"
       translucent
     />
-    <Home />
+    <Routes />
   </View>
 );
 
