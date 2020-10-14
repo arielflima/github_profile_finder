@@ -1,4 +1,5 @@
 import React from 'react';
+import { Linking } from 'react-native';
 
 import {
   Container,
@@ -27,7 +28,9 @@ const PreviewUser: React.FC<PreviewUserProps> = ({
 }) => {
   return (
     <Container>
-      <TouchClick>
+      <TouchClick
+        onPress={() => Linking.openURL(`https://www.github.com/${login}`)}
+      >
         <ContainerTouchableHighlight>
           <AvatarContainer>
             <Avatar source={{ uri: avatar_url }} />
