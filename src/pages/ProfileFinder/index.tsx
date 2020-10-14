@@ -1,12 +1,14 @@
 import React, { useState, useCallback } from 'react';
+import Background from '../../assets/githubVector.png';
 
 import {
   Container,
   Header,
+  IconFormatted,
   TitleHeader,
   Content,
   SearchArea,
-  IconFormatted,
+  ImageBackground,
 } from './styles';
 
 import api from '../../services/api';
@@ -29,21 +31,23 @@ const ProfileFinder: React.FC = () => {
 
   return (
     <Container>
-      <Header>
-        <IconFormatted name="github" size={22} />
-        <TitleHeader>Github profile finder</TitleHeader>
-      </Header>
-      <Content>
-        <SearchArea>
-          <SearchInput
-            value={searchValue}
-            onChangeText={setSearchValue}
-            placeholder="username do github"
-          />
-          <SearchButton title="buttonSearch" onPress={handleSearch} />
-        </SearchArea>
-        {user && <PreviewUser {...user} />}
-      </Content>
+      <ImageBackground source={Background}>
+        <Header>
+          <IconFormatted name="github" size={30} />
+          <TitleHeader>Profile Finder</TitleHeader>
+        </Header>
+        <Content>
+          <SearchArea>
+            <SearchInput
+              value={searchValue}
+              onChangeText={setSearchValue}
+              placeholder="username do github"
+            />
+            <SearchButton title="buttonSearch" onPress={handleSearch} />
+          </SearchArea>
+          {user && <PreviewUser {...user} />}
+        </Content>
+      </ImageBackground>
     </Container>
   );
 };
