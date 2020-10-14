@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   margin: 15px;
+  margin-top: 30px;
   width: 93%;
   height: 180px;
 `;

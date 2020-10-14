@@ -12,26 +12,33 @@ export const ImageBackground = styled.ImageBackground`
 
 export const Header = styled.View`
   width: 100%;
-  height: 10%;
+  height: 15%;
   background-color: #373a40;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding-bottom: 5px;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   opacity: 0.7;
+  padding-bottom: 25px;
 `;
 
 export const IconFormatted = styled(Icon)`
   color: #29a19c;
-  padding-left: 15px;
+  margin-left: -40px;
   padding-right: 10px;
   padding-bottom: 5px;
 `;
+
+export const TitlesContainer = styled.View``;
 
 export const TitleHeader = styled.Text`
   color: #fff;
   font-size: 24px;
   margin-bottom: 3px;
+`;
+
+export const TitleHeaderSub = styled.Text`
+  color: #fff;
+  margin-top: -10px;
 `;
 
 export const Content = styled.View`
@@ -40,7 +47,7 @@ export const Content = styled.View`
 
 export const SearchArea = styled.View`
   flex-direction: row;
-  margin-top: 10%;
+  margin-top: -8%;
   align-items: center;
   justify-content: center;
 `;

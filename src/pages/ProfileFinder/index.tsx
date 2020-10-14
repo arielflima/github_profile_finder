@@ -5,7 +5,9 @@ import {
   Container,
   Header,
   IconFormatted,
+  TitlesContainer,
   TitleHeader,
+  TitleHeaderSub,
   Content,
   SearchArea,
   ImageBackground,
@@ -33,8 +35,11 @@ const ProfileFinder: React.FC = () => {
     <Container>
       <ImageBackground source={Background}>
         <Header>
-          <IconFormatted name="github" size={30} />
-          <TitleHeader>Profile Finder</TitleHeader>
+          <IconFormatted name="github" size={40} />
+          <TitlesContainer>
+            <TitleHeader>Profile Finder</TitleHeader>
+            <TitleHeaderSub>Github, simples.</TitleHeaderSub>
+          </TitlesContainer>
         </Header>
         <Content>
           <SearchArea>

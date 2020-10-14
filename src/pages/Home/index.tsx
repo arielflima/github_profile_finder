@@ -31,7 +31,7 @@ const Home: React.FC = () => {
       <ImageBackground source={Background}>
         <Logo name="github" size={80} />
         <TextLogo1>Profile Finder</TextLogo1>
-        <TextLogo2>Github</TextLogo2>
+        <TextLogo2>Github, simples.</TextLogo2>
         <ContentText>Encontre profiles do github de forma simples.</ContentText>
         <EnterButton onPress={() => handleEnter()}>
           <EnterButtonContainer>
