@@ -9,8 +9,8 @@ export const Container = styled.View`
 
 export const TouchClick = styled.TouchableHighlight`
   flex: 1;
-  background-color: #373a40;
-  border-radius: 15px;
+  background-color: #373a4090;
+  border-radius: 10px;
 `;
 
 export const ContainerTouchableHighlight = styled.View`
@@ -22,8 +22,9 @@ export const ContainerTouchableHighlight = styled.View`
 export const Avatar = styled.Image`
   width: 120px;
   height: 120px;
-  border-radius: 60px;
+  border-radius: 10px;
   margin: 10px;
+  margin-left: 15px;
   border-color: #29a19c;
 `;
 

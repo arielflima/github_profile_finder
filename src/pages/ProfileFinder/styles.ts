@@ -13,11 +13,10 @@ export const ImageBackground = styled.ImageBackground`
 export const Header = styled.View`
   width: 100%;
   height: 15%;
-  background-color: #373a40;
+  background-color: #373a4090;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  opacity: 0.7;
   padding-bottom: 25px;
 `;
 

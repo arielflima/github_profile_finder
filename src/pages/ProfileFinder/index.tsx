@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { Alert } from 'react-native';
 import Background from '../../assets/githubVector.png';
 
 import {
@@ -24,11 +25,24 @@ const ProfileFinder: React.FC = () => {
   const [user, setUser] = useState<PreviewUserProps>();
 
   const handleSearch = useCallback(async () => {
-    const response = await api.get(`users/${searchValue}`);
+    try {
+      const response = await api.get(`users/${searchValue}`);
 
-    const { avatar_url, name, login, followers, public_repos } = response.data;
+      const {
+        avatar_url,
+        name,
+        login,
+        followers,
+        public_repos,
+      } = response.data;
 
-    setUser({ avatar_url, name, login, followers, public_repos });
+      setUser({ avatar_url, name, login, followers, public_repos });
+    } catch (err) {
+      Alert.alert(
+        'Usuário não encontrado!',
+        'Descupe, mas o usuário digitado não foi encontrado, verifique e tente novamente.',
+      );
+    }
   }, [searchValue]);
 
   return (
