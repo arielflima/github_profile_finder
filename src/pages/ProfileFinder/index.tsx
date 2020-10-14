@@ -19,12 +19,15 @@ import api from '../../services/api';
 import SearchInput from '../../components/SearchInput';
 import SearchButton from '../../components/SearchButton';
 import PreviewUser, { PreviewUserProps } from '../../components/PreviewUser';
+import LoadingPage from '../../components/LoadingPage';
 
 const ProfileFinder: React.FC = () => {
   const [searchValue, setSearchValue] = useState('');
   const [user, setUser] = useState<PreviewUserProps>();
+  const [loading, setLoading] = useState(false);
 
   const handleSearch = useCallback(async () => {
+    setLoading(true);
     try {
       const response = await api.get(`users/${searchValue}`);
 
@@ -36,12 +39,15 @@ const ProfileFinder: React.FC = () => {
         public_repos,
       } = response.data;
 
+      setLoading(false);
       setUser({ avatar_url, name, login, followers, public_repos });
     } catch (err) {
       Alert.alert(
         'Usuário não encontrado!',
         'Descupe, mas o usuário digitado não foi encontrado, verifique e tente novamente.',
       );
+
+      setLoading(false);
     }
   }, [searchValue]);
 
@@ -64,7 +70,7 @@ const ProfileFinder: React.FC = () => {
             />
             <SearchButton title="buttonSearch" onPress={handleSearch} />
           </SearchArea>
-          {user && <PreviewUser {...user} />}
+          {loading ? <LoadingPage /> : user && <PreviewUser {...user} />}
         </Content>
       </ImageBackground>
     </Container>
